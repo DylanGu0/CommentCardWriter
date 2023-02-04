@@ -14,6 +14,7 @@
 		A267EBB4298E6F680041C79E /* CommentCardWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A267EBB3298E6F680041C79E /* CommentCardWriterTests.swift */; };
 		A267EBBE298E6F680041C79E /* CommentCardWriterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A267EBBD298E6F680041C79E /* CommentCardWriterUITests.swift */; };
 		A267EBC0298E6F680041C79E /* CommentCardWriterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A267EBBF298E6F680041C79E /* CommentCardWriterUITestsLaunchTests.swift */; };
+		A267EBCF298E70770041C79E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A267EBCE298E70770041C79E /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		A267EBB9298E6F680041C79E /* CommentCardWriterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentCardWriterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A267EBBD298E6F680041C79E /* CommentCardWriterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITests.swift; sourceTree = "<group>"; };
 		A267EBBF298E6F680041C79E /* CommentCardWriterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A267EBCE298E70770041C79E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				A267EBA2298E6F660041C79E /* CommentCardWriterApp.swift */,
 				A267EBA4298E6F660041C79E /* ContentView.swift */,
+				A267EBCE298E70770041C79E /* Comment.swift */,
 				A267EBA6298E6F680041C79E /* Assets.xcassets */,
 				A267EBA8298E6F680041C79E /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A267EBA5298E6F660041C79E /* ContentView.swift in Sources */,
+				A267EBCF298E70770041C79E /* Comment.swift in Sources */,
 				A267EBA3298E6F660041C79E /* CommentCardWriterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

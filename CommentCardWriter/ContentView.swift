@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @State private var comment: Comment
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(spacing: 150) {
+            Text("\(comment.text)")
+            Button("Generate Comment", action: {
+                comment.isHidden.toggle()
+            })
+        }
     }
 }
 
@@ -19,3 +25,7 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+#if DEBUG
+comments = ["Good", "Bad", "Mediocre", "Amazing", "Terrible"]
+comment = Comment(comment(comments.randomElement()))
