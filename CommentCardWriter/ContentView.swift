@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
-
-    @State private var comment: Comment
+    @StateObject var comment: Comment = Comment(comment: feeling.randomElement() ?? "Mediocre", subject: "computer science")
+    
     var body: some View {
-        VStack(spacing: 150) {
-            Text("\(comment.text)")
+        VStack(spacing: 100) {
+            if comment.isHidden {
+                Text("\(comment.text)")
+            } else {
+                Text("Comment will be generated here...")
+            }
             Button("Generate Comment", action: {
                 comment.isHidden.toggle()
+                comment.generateComment()
             })
+            Picker(label: "How well is this class going") {
+                
+            }
         }
     }
 }
@@ -27,5 +35,5 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 #if DEBUG
-comments = ["Good", "Bad", "Mediocre", "Amazing", "Terrible"]
-comment = Comment(comment(comments.randomElement()))
+let feeling = ["well", "badly", "mediocrely", "amazingly", "terribly"]
+#endif

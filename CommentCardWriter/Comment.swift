@@ -7,12 +7,20 @@
 
 import Foundation
 
-class Comment {
-    let text: String
-    var isHidden: Bool
+class Comment: ObservableObject {
+    @Published var text: String = ""
+    @Published var isHidden: Bool
+    let subject: String
+    var feeling: String
 
-    init(comment: String) {
-        self.text = comment
-        self.isHidden = false        
+    init(comment: String, subject: String) {
+        self.feeling = comment
+        self.isHidden = false
+        self.subject = subject
     }
+    
+    func generateComment() {
+        text = "I think that \(self.subject) is going \(self.feeling)."
+    }
+    
 }
