@@ -7,20 +7,32 @@
 
 import Foundation
 
-class Comment: ObservableObject {
-    @Published var text: String = ""
-    @Published var isHidden: Bool
+class Comment {
+    var text: String = ""
     let subject: String
     var feeling: String
 
-    init(comment: String, subject: String) {
-        self.feeling = comment
-        self.isHidden = false
+    init(feeling: Double, subject: String) {
+        switch feeling {
+        case 0...19:
+            self.feeling = "terribly"
+        case 20...39:
+            self.feeling = "badly"
+        case 40...59:
+            self.feeling = "mediocrely"
+        case 60...79:
+            self.feeling = "well"
+        case 80...99:
+            self.feeling = "amazingly"
+        default:
+            self.feeling = "I broke the app"
+        }
         self.subject = subject
     }
     
-    func generateComment() {
-        text = "I think that \(self.subject) is going \(self.feeling)."
+    func generateComment() -> String {
+        self.text = "I think that \(self.subject) is going \(self.feeling)."
+        return self.text
     }
     
 }

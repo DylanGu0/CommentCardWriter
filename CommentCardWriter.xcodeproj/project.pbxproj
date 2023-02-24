@@ -15,6 +15,7 @@
 		A267EBBE298E6F680041C79E /* CommentCardWriterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A267EBBD298E6F680041C79E /* CommentCardWriterUITests.swift */; };
 		A267EBC0298E6F680041C79E /* CommentCardWriterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A267EBBF298E6F680041C79E /* CommentCardWriterUITestsLaunchTests.swift */; };
 		A267EBCF298E70770041C79E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A267EBCE298E70770041C79E /* Comment.swift */; };
+		A2C9505329A8EF2D00D4B934 /* Divisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C9505229A8EF2D00D4B934 /* Divisions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		A267EBBD298E6F680041C79E /* CommentCardWriterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITests.swift; sourceTree = "<group>"; };
 		A267EBBF298E6F680041C79E /* CommentCardWriterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A267EBCE298E70770041C79E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		A2C9505229A8EF2D00D4B934 /* Divisions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divisions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				A267EBA2298E6F660041C79E /* CommentCardWriterApp.swift */,
 				A267EBA4298E6F660041C79E /* ContentView.swift */,
 				A267EBCE298E70770041C79E /* Comment.swift */,
+				A2C9505229A8EF2D00D4B934 /* Divisions.swift */,
 				A267EBA6298E6F680041C79E /* Assets.xcassets */,
 				A267EBA8298E6F680041C79E /* Preview Content */,
 			);
@@ -262,6 +265,7 @@
 			files = (
 				A267EBA5298E6F660041C79E /* ContentView.swift in Sources */,
 				A267EBCF298E70770041C79E /* Comment.swift in Sources */,
+				A2C9505329A8EF2D00D4B934 /* Divisions.swift in Sources */,
 				A267EBA3298E6F660041C79E /* CommentCardWriterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
