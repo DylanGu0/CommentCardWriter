@@ -8,5 +8,12 @@
 import Foundation
 
 class Divisions {
-    let divisions: [String] = ["CComX-1 - DPC", "CComX-1 - MC", "CMdpW-1 - MJS", "CMdaY-1 - JT"]
+    let subjects: [String: String] = ["CComX-1 - DPC": "Computer Science", "CComX-1 - MC": "Computer Science", "CMdpW-1 - MJS": "Pure Maths", "CMdaY-1 - JT": "Applied Maths"]
+    var keys: [String]
+    
+    init() {
+        for subject in subjects.Keys {
+            self.keys.append(subject)
+        }
+    }
 }
