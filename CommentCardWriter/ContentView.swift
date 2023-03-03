@@ -13,14 +13,14 @@ struct ContentView: View {
     @State private var comment: String = ""
     @State private var subject: String = ""
     @State private var buttonName: String = "Generate Comment"
-    @State private var selectedDivision : String = "this lesson"
-    let divisions = Divisions().keys
+    @State private var selectedDivision : String = "CComX-1 - DPC"
+    let divisions = Divisions()
     
     var body: some View {
         Form {
             Section {
                 Picker("Select the division", selection: $selectedDivision) {
-                    ForEach(divisions, id: \.self) { // How do i make it so it sets selectedDivision to a different thing other than te things in the picker
+                    ForEach(divisions.keys, id: \.self) { // How do i make it so it sets selectedDivision to a different thing other than the things in the picker
                         Text("\($0)")
                     }
                 }
@@ -33,30 +33,36 @@ struct ContentView: View {
             }
             
             Section() {
-                VStack(alignment: .center) {
-                    Section {
-                        if !isHidden {
-                            Text("\(comment)")
-                                .frame(width: 310)
-                        } else {
-                            Text("Comment will be generated here...")
-                                .frame(width: 310)
-                        }
+                    if !isHidden {
+                        Text("\(comment)")
+                            .frame(width: 350)
+                    } else {
+                        Text("Comment will be generated here...")
+                            .frame(width: 350)
                     }
+            }
                     
-                    Section {
-                        Button(buttonName, action: {
-                            let comment = Comment(feeling: sliderFeeling, subject: selectedDivision)
-                            self.comment = comment.generateComment()
-                            isHidden.toggle()
-                            if isHidden {
-                                buttonName = "Generate Comment"
-                            } else {
-                                buttonName = "Delete Comment"
-                            }
-                        })
+            Section {
+                Button(buttonName, action: {
+                    let comment = Comment(feeling: sliderFeeling, subject: selectedDivision)
+                        self.comment = comment.generateComment()
+                    isHidden.toggle()
+                    if isHidden {
+                        buttonName = "Generate Comment"
+                    } else {
+                        buttonName = "Delete Comment"
                     }
-                }
+                })
+                    .frame(width: 350)
+            }
+            
+            Section {
+                    Button("Save", action: {})
+                    Button("View Previous", action: {
+                        NavigationLink("View saved comments") {
+                            PreviousCommentsView()
+                        }
+                    })
             }
         }
     }
